@@ -1,0 +1,1 @@
+# 2122-DBI-SZ-NoSQL_Aufgabenstellung
