@@ -1,0 +1,51 @@
+@startuml SwipeAndWatch
+class Swipe {
+    id : Long
+    movie : Movie
+    user : User
+    typ : String
+    when : DateTime
+}
+class User {
+    id : Long
+    userName : String
+    gender: String
+    birthday : Date
+    password : String
+}
+class Movie {
+    id : Long
+    title : String
+    length : Integer
+    status : String
+    language : String
+    budget : Integer
+    director : String
+    actors : List<Actor>
+    genre : String
+    streamingPlatforms : List>StreamingPlatform>
+    rating : Decimal
+}
+
+class StreamingPlatform {
+    id : Long
+    name : String
+    webaddress : String
+}
+class Actor {
+    id : Long
+    firstName : String
+    lastName : String
+    gender: String
+    birthday : Integer
+}
+
+Swipe --|> Movie
+Swipe --|> User
+Movie --|> StreamingPlatform
+Movie --|> Actor
+
+
+
+
+@enduml
